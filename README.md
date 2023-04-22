@@ -14,11 +14,12 @@
 ## :toolbox: Guía de uso
 
 ### :clipboard: Prerrequisitos
-Contar con terminal para realizar instalación mediante bash o powershell.
+Contar con terminal para realizar instalación mediante pip, bash o powershell.
 
 
 ### :wrench: Instalación con poetry
-El primer paso es instalar el administrador de paquetes poetry para instalarlo puede usarse pip o directamente mediante los siguientes comandos.
+El primer paso es instalar el administrador de paquetes poetry para instalarlo 
+puede usarse pip o directamente mediante los siguientes comandos.
 
 ```
 pip install poetry
@@ -30,6 +31,12 @@ curl -sSL https://install.python-poetry.org | python3 -
 Windows
 ```powershell
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+```
+
+Para comprobar la instalación podemos verificar la versión de poetry instalada mediante
+el siguiente comando.
+```
+poetry --version
 ```
 
 

@@ -13,11 +13,11 @@
 
 # :toolbox: Guía de uso
 
-## :clipboard: Prerrequisitos
+### :clipboard: Prerrequisitos
 Contar con terminal para realizar instalación mediante pip, bash o powershell.
 
 
-## :wrench: Instalación con poetry
+### :wrench: Instalación con poetry
 El primer paso es instalar el administrador de paquetes poetry para instalarlo 
 puede usarse pip o directamente mediante los siguientes comandos.
 

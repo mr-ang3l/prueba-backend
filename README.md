@@ -18,6 +18,7 @@
 Contar con terminal para realizar instalación mediante bash o powershell.
 
 
+
 ### :wrench: Instalación con poetry
 Linux
 ```bash
@@ -27,6 +28,7 @@ Windows
 ```powershell
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```
+
 
 ### :hammer: Instalación con pip
 

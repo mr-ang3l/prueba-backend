@@ -15,6 +15,7 @@
 
 ### :clipboard: Prerrequisitos
 Contar con terminal para realizar instalación mediante pip, bash o powershell.
+<hr>
 
 
 ### :wrench: Instalación con poetry
@@ -52,5 +53,6 @@ poetry shell
 
 
 ## :floppy_disk: Backend
+
 
 ## :mag_right: Casos de uso 

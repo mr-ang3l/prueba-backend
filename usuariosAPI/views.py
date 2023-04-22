@@ -1,23 +1,26 @@
 from rest_framework import viewsets
 from rest_framework.response import Response
 from rest_framework import status
+from .serializers import UsuarioSerializer
+from .models import Usuario
 
 
-class UsuarioView(viewsets.ViewSet):
+class UsuarioView(viewsets.ModelViewSet):
+    queryset = Usuario.objects.all()
+    serializer_class = UsuarioSerializer
+
     def list(self, request):
-        return Response({"mensaje: Lista de usuarios"}, status.HTTP_200_OK)
+        query = request.GET.get("query", None)
 
-    def create(self, request):
-        return Response({"mensaje: Usuario creado"}, status.HTTP_201_CREATED)
+        if query == "edad":
+            return Response({"mensaje": "Orden por edad"}, status=status.HTTP_200_OK)
 
-    def update(self, request, pk):
-        return Response({"mensaje: Usuario actualizado"}, status.HTTP_200_OK)
+        if query == "apellido":
+            return Response(
+                {"mensaje": "Orden por apellido"}, status=status.HTTP_200_OK
+            )
 
-    def retrieve(self, request, pk):
-        return Response({"mensaje: Usuario individual"}, status.HTTP_200_OK)
-
-    def partial_update(self, request, pk):
-        return Response({"mensaje: Usuario actualizado"}, status.HTTP_200_OK)
-
-    def destroy(self, request, pk):
-        return Response({"mensaje: Usuario eliminado"}, status.HTTP_200_OK)
+        return Response(
+            self.serializer_class(self.queryset, many=True).data,
+            status=status.HTTP_200_OK,
+        )

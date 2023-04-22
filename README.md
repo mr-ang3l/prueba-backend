@@ -15,8 +15,10 @@
 ## :toolbox: Guía de uso
 
 ### :clipboard: Prerrequisitos
-Este proyecto usa poetry como administrador de paquetes.
+Contar con terminal para realizar instalación mediante bash o powershell.
 
+
+### :wrench: Instalación con poetry
 Linux
 ```bash
 curl -sSL https://install.python-poetry.org | python3 -
@@ -25,8 +27,6 @@ Windows
 ```powershell
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```
-
-### :wrench: Instalación con poetry
 
 ### :hammer: Instalación con pip
 

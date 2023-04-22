@@ -3,14 +3,28 @@
     <h1>Prueba prática de reclutamiento para el perfil de backend</h1>
 </div>
 
-### :clipboard: Contenido
+### :bookmark_tabs: Contenido
 
-- [Instalación](#toolbox-instalación)
+- [Guía de uso](#toolbox-guía-de-uso)
+    * [Prerrequisitos](#clipboard-prerrequisitos)
+    * [Instalación](#wrench-instalación)
 - [Backend](#floppy_disk-backend)
-- [Casos de uso](#wrench-casos-de-uso)
+- [Casos de uso](#mag_right-casos-de-uso)
 
-## :toolbox: Instalación
+## :toolbox: Guía de uso
+
+### :clipboard: Prerrequisitos
+Este proyecto usa poetry como administrador de paquetes.
+
+```bash
+    curl -sSL https://install.python-poetry.org | python3 -
+```
+```powershell
+    (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
+```
+
+### :wrench: Instalación
 
 ## :floppy_disk: Backend
 
-## :wrench: Casos de uso 
+## :mag_right: Casos de uso 

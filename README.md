@@ -39,7 +39,16 @@ el siguiente comando.
 poetry --version
 ```
 
+Poetry instalará las dependencias usando el archivo pyproject.toml, solo se hará uso de un comando
+para realizar esto.
+```
+poetry install
+```
 
+Una vez instaladas todas las dependencias lo único que queda hacer es activar el entorno virtual.
+```
+poetry shell
+```
 
 
 ## :floppy_disk: Backend

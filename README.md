@@ -15,7 +15,6 @@
 
 ## :clipboard: Prerrequisitos
 Contar con terminal para realizar instalación mediante pip, bash o powershell.
-<hr>
 
 
 ## :wrench: Instalación con poetry

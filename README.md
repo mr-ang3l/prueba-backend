@@ -15,7 +15,7 @@
 
 ### :clipboard: Prerrequisitos
 Contar con terminal para realizar instalación mediante pip, bash o powershell.
-
+<br>
 
 ### :wrench: Instalación con poetry
 El primer paso es instalar el administrador de paquetes poetry para instalarlo 

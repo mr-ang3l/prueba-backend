@@ -7,7 +7,8 @@
 
 - [Guía de uso](#toolbox-guía-de-uso)
     * [Prerrequisitos](#clipboard-prerrequisitos)
-    * [Instalación](#wrench-instalación)
+    * [Instalación con poetry](#wrench-instalación-con-poetry)
+    * [Instalación con pip](#hammer-instalación-con-pip)
 - [Backend](#floppy_disk-backend)
 - [Casos de uso](#mag_right-casos-de-uso)
 
@@ -25,7 +26,9 @@ Windows
 (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```
 
-### :wrench: Instalación
+### :wrench: Instalación con poetry
+
+### :hammer: Instalación con pip
 
 ## :floppy_disk: Backend
 

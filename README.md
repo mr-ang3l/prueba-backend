@@ -8,7 +8,6 @@
 - [Guía de uso](#toolbox-guía-de-uso)
     * [Prerrequisitos](#clipboard-prerrequisitos)
     * [Instalación con poetry](#wrench-instalación-con-poetry)
-    * [Instalación con pip](#hammer-instalación-con-pip)
 - [Backend](#floppy_disk-backend)
 - [Casos de uso](#mag_right-casos-de-uso)
 
@@ -18,8 +17,12 @@
 Contar con terminal para realizar instalación mediante bash o powershell.
 
 
-
 ### :wrench: Instalación con poetry
+El primer paso es instalar el administrador de paquetes poetry para instalarlo puede usarse pip o directamente mediante los siguientes comandos.
+
+```
+pip install poetry
+```
 Linux
 ```bash
 curl -sSL https://install.python-poetry.org | python3 -
@@ -30,7 +33,7 @@ Windows
 ```
 
 
-### :hammer: Instalación con pip
+
 
 ## :floppy_disk: Backend
 

@@ -5,9 +5,9 @@
 
 ### :clipboard: Contenido
 
-- [Instalación](toolbox-instalación)
-- [Backend](floppy_disk-backend)
-- [Casos de uso](wrench-casos-de-uso)
+- [Instalación](#toolbox-instalación)
+- [Backend](#floppy_disk-backend)
+- [Casos de uso](#wrench-casos-de-uso)
 
 ## :toolbox: Instalación
 

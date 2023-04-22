@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "mbinnovations"
+version = "0.1.0"
+description = "Prueba práctica para el reclutamiento para el perfil backend"
+authors = ["chrisnaibaf <chris.naibaf@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

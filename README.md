@@ -16,9 +16,11 @@
 ### :clipboard: Prerrequisitos
 Este proyecto usa poetry como administrador de paquetes.
 
+Linux
 ```bash
     curl -sSL https://install.python-poetry.org | python3 -
 ```
+Windows
 ```powershell
     (Invoke-WebRequest -Uri https://install.python-poetry.org -UseBasicParsing).Content | py -
 ```

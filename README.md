@@ -8,8 +8,6 @@
 - [Guía de uso](#toolbox-guía-de-uso)
     * [Prerrequisitos](#clipboard-prerrequisitos)
     * [Instalación con poetry](#wrench-instalación-con-poetry)
-- [Backend](#floppy_disk-backend)
-- [Casos de uso](#mag_right-casos-de-uso)
 
 # :toolbox: Guía de uso
 
@@ -49,9 +47,3 @@ Una vez instaladas todas las dependencias lo único que queda hacer es activar e
 ```
 poetry shell
 ```
-
-
-## :floppy_disk: Backend
-
-
-## :mag_right: Casos de uso 

@@ -4,4 +4,4 @@ SECRET_KEY = "development"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["localhost", "*"]

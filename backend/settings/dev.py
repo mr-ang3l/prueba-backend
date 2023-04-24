@@ -4,4 +4,6 @@ SECRET_KEY = "development"
 
 DEBUG = True
 
-ALLOWED_HOSTS = ["localhost", "*"]
+CORS_ORIGIN_ALLOW_ALL = DEBUG
+
+ALLOWED_HOSTS = ["https://chris-naibaf.github.io/prueba-backend/"]

@@ -10,11 +10,8 @@
     <h1>Lista de usuarios</h1>
 
     <script>
-        async function logJSONData() {
-            const response = await fetch("http://127.0.0.1:8000/api/usuarios");
-            const jsonData = await response.json();
-            console.log(jsonData);
-        }
+        fetch("http://127.0.0.1:8000/")
+            .then(res => console.log(res))
 
         console.log("HOLA")
     </script>

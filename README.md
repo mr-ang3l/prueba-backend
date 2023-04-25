@@ -88,4 +88,4 @@ python manage.py runserver
 ```
 
 Para entrar a la ruta donde se está ejecutando el proyecto se puede hacer control + click en la ruta que aparece
-al ejecutar el comando runserver o poner la siguiente url directamente en el navegador http://127.0.0.1:8000/
+al ejecutar el comando runserver o acceder a la siguiente url directamente en el navegador http://127.0.0.1:8000/

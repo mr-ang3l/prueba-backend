@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles usuario</title>
+    <link rel="stylesheet" href="{% static 'css/detalle_usuario.css' %}">
+</head>
+<body>
+    <button onclick="window.location.href='http://localhost:8000/usuarios/'">Volver a usuarios</button>
+    <div id="usuario"></div>
+    <button id="eliminar-usuario">Eliminar usuario</button>
+    <hr>
+    <h2>Actualizar usuario</h2>
+    <div id="formulario"></div>
+    <script src="{% static 'js/detalle_usuario.js' %}"></script>
+</body>
+</html>

@@ -7,20 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/usuarios.css' %}">
+<!--    <link rel="stylesheet" href="../static/css/usuarios.css">-->
 </head>
 <body>
-    <h1>Lista de usuarios</h1>
-    <button id="filtro-edad">Filtrar por edad</button>
-    <button id="filtro-apellido">Filtrar por apellido paterno</button>
-    <button id="limpiar-filtros">Limpiar filtros</button>
+    <h1 id="main-title">Lista de <span>usuarios</span></h1>
+    <div id="buttons">
+      <button id="filtro-edad">Filtrar por edad 👶</button>
+      <button id="filtro-apellido">Filtrar por apellido paterno 👨</button>
+      <button id="limpiar-filtros">Limpiar filtros 🧹</button>
+    </div>
 
 
-    <ul id="usuarios-lista"></ul>
+    <div id="list-style"><ul id="usuarios-lista"></ul></div>
     <hr>
   
-    <h2>Agregar usuario</h2>
     <form id="formulario">
+      <h2 id="form-title">Agregar usuario</h2>
+
       <label for="nombre">Nombre:</label>
       <input type="text" id="nombre" name="nombre" required><br>
   
@@ -38,11 +46,11 @@
   
       <label for="telefono">Teléfono:</label>
       <input type="tel" id="telefono" name="telefono" required><br>
-      <div>
+      <div id="submit">
         <button type="submit">Agregar usuario</button>
       </div>
     </form>
-    
+    <button id="add-new"><a href="#form-title" id="add-new-a">+</a></button>
     
 
     <script src="{% static 'js/usuarios.js' %}"></script>

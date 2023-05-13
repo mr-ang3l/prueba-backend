@@ -36,7 +36,7 @@ INSTALLED_APPS = [
 
 SECRET_KEY = "hola"
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["localhost", ".vercel.app"]
 

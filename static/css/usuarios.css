@@ -68,6 +68,14 @@
     flex-direction: row;
   }
 
+.green:hover {
+  background: #2e9232;
+}
+
+.filtros:hover, .add-user:hover  {
+  box-shadow: 2px 2px 5px black;
+}
+
 @media only screen and (max-width: 768px) {
   #buttons {
     width: 70%;
@@ -86,8 +94,8 @@
 
   #limpiar-filtros:hover {
     animation-name: shake;
-    animation-duration: 320ms;
-    animation-iteration-count: infinite;
+    animation-duration: 250ms;
+    animation-iteration-count: 1;
     animation-direction: normal;
   }
 

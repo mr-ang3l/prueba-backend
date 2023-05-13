@@ -10,7 +10,7 @@ body {
   margin: auto;
   gap: 10px;
   display: flex;
-  align-items: center;
+  align-items:flex-start;
   justify-content:space-between;
   flex-direction: column;
 }
@@ -22,7 +22,7 @@ body {
     flex-direction: column;
   }
   
-  label {
+#form label {
     width: 70vw;
     display: block;
     margin-bottom: 0.5rem; /* Espacio entre la etiqueta y el campo */
@@ -57,9 +57,9 @@ body {
     transition-timing-function: cubic-bezier(0, .75, .95, 1);
   }
 
-  #volver {
-    align-self: flex-start;
+  .volver {
     margin-top: 1em;
+    border-radius: 0.25rem 0.25rem 0 0;
   }
   
   button:hover {

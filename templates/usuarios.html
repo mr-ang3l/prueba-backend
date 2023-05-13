@@ -17,9 +17,9 @@
 <body>
     <h1 id="main-title">Lista de <span>usuarios</span></h1>
     <div id="buttons">
-      <button id="filtro-edad">Filtrar por edad 👶</button>
-      <button id="filtro-apellido">Filtrar por apellido paterno 👨</button>
-      <button id="limpiar-filtros">Limpiar filtros 🧹</button>
+      <button id="filtro-edad" class="filtros green">Filtrar por edad 👶</button>
+      <button id="filtro-apellido" class="filtros green">Filtrar por apellido paterno 👨</button>
+      <button id="limpiar-filtros" class="filtros">Limpiar filtros 🧹</button>
     </div>
 
 
@@ -47,7 +47,7 @@
       <label for="telefono">Teléfono:</label>
       <input type="tel" id="telefono" name="telefono" required><br>
       <div id="submit">
-        <button type="submit">Agregar usuario</button>
+        <button class="add-user" type="submit">Agregar usuario</button>
       </div>
     </form>
     <button id="add-new"><a href="#form-title" id="add-new-a">+</a></button>

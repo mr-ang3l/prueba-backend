@@ -59,15 +59,39 @@
   }
 
   #buttons {
-    width: 70vw;
+    width: 70%;
     margin: auto;
+    gap: 10px;
     display: flex;
     align-items: center;
     justify-content:space-between;
     flex-direction: row;
   }
 
-  #submit {
+@media only screen and (max-width: 768px) {
+  #buttons {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    flex-direction: column;
+  }
+
+  .button {
+    width: 100%;
+    display: block;
+  }
+}
+
+  #limpiar-filtros:hover {
+    animation-name: shake;
+    animation-duration: 320ms;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+  }
+
+#submit {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -114,14 +138,17 @@
     padding: 10px 20px;
     margin: 5px;
     text-decoration: none;
-    background-color: #c02c2c;
-    color: white;
+    background: white;
+    color: black;
     border-radius: 5px;
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 200ms;
+    transition-timing-function: cubic-bezier(0, .75, .95, 1);
   }
   
   ul li a:hover {
-    background-color: #9b2e2e;
+    color: white;
+    background-color: #FE5F00;
   }
 
   #list-style {
@@ -206,3 +233,11 @@
       color: #FE5F00;
     }
   }
+
+  @keyframes shake {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+   }

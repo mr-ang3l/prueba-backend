@@ -1,51 +1,81 @@
 * {
-    font-size: 1.05em;
-  }
+  font-size: 1.05em;
+  font-family: 'Roboto', sans-serif;
+  color: rgb(10, 9, 8);
+}
+
+body {
+  background:rgba(255, 251, 252);
+  width: 70%;
+  margin: auto;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  flex-direction: column;
+}
 
 #formulario {
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: column;
   }
   
   label {
+    width: 70vw;
     display: block;
     margin-bottom: 0.5rem; /* Espacio entre la etiqueta y el campo */
+    font-size: 115%;
   }
   
-  input,
-  textarea {
+  input {
+    background: rgba(248, 242, 244);
     display: block;
-    width: 100%; /* Ancho completo */
+    width: 70vw;
     padding: 0.5rem; /* Espacio interno */
-    border: 1px solid #ccc; /* Borde */
+    border: none;
+    border-bottom: 1px solid #ccc; /* Borde */
     border-radius: 0.25rem; /* Bordes redondeados */
+  }
+
+  input:focus {
+    outline: none !important;
+    border: none;
+    border-bottom: 1px solid #4CAF50; 
   }
 
   button {
     background-color: #4CAF50;
-    border: none;
     color: white;
+    text-align: left;
+    display: inline;
+    border: none;
+    border-radius: .45rem;
     padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 200ms;
+    transition-timing-function: cubic-bezier(0, .75, .95, 1);
+  }
+
+  #volver {
+    align-self: flex-start;
+    margin-top: 1em;
   }
   
   button:hover {
-    background-color: #2E8B57;
+    background-color: rgb(230, 95, 0);
     cursor: pointer;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h2, h3, h4, h5, h6 {
     font-weight: bold;
     margin: 1em 0;
   }
   
   h1 {
-    font-size: 2em;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 5rem;
+    font-weight: bold;
   }
   
   h2 {
@@ -56,6 +86,38 @@
     font-size: 1.2em;
   }
 
-  div {
-    background-color: #f5f5f5;
+  hr {
+    width: 65vw;
+    border-color: solid 1px; #a0a0a0;
+  }
+
+  ul {
+    background-color: rgb(10, 9, 8, .3);
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  li {
+    padding: 10px 20px;
+    margin: 5px;
+    text-decoration: none;
+    background: white;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: background-color 200ms;
+    transition-timing-function: cubic-bezier(0, .75, .95, 1);
+  }
+
+  #list-style {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    flex-direction: column;
+  }
+
+  #usuario {
+    width: 70vw;
+    padding: 1.5em 0;
+    margin: 1em;
   }

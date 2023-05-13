@@ -7,22 +7,26 @@ console.log(number);
 fetch(`http://localhost:8000/api/usuarios/${number}`)
     .then(response => response.json())
     .then(usuario => {
-        let nombre = document.createElement('h3');
-        nombre.textContent = `Nombre: ${usuario.nombre}`;
+        let name = usuario.nombre;
+        let lastP = usuario.apellido_paterno;
+        let lastM = usuario.apellido_materno;
 
-        let apellidoPaterno = document.createElement('h3');
-        apellidoPaterno.textContent = `Apellido Paterno: ${usuario.apellido_paterno}`;
+        let nombre = document.createElement('li');
+        nombre.textContent = `Nombre: ${plural(name)}`;
 
-        let apellidoMaterno = document.createElement('h3');
-        apellidoMaterno.textContent = `Apellido Materno: ${usuario.apellido_materno}`;
+        let apellidoPaterno = document.createElement('li');
+        apellidoPaterno.textContent = `Apellido Paterno: ${plural(lastP)}`;
 
-        let edad = document.createElement('h3');
+        let apellidoMaterno = document.createElement('li');
+        apellidoMaterno.textContent = `Apellido Materno: ${plural(lastM)}`;
+
+        let edad = document.createElement('li');
         edad.textContent = `Edad: ${usuario.edad}`;
 
-        let email = document.createElement('h3');
+        let email = document.createElement('li');
         email.textContent = `Email: ${usuario.email}`;
 
-        let telefono = document.createElement('h3');
+        let telefono = document.createElement('li');
         telefono.textContent = `Teléfono: ${usuario.telefono}`;
 
         // Agregar los elementos <h2> al elemento <div>
@@ -46,6 +50,7 @@ function mostrarFormularioActualizacion(id) {
     let formulario = document.createElement('form');
     formulario.id = 'formulario-actualizacion';
     formulario.innerHTML = `
+        <h2>Actualizar usuario</h2>
         <label for="nombre">Nombre:</label>
         <input type="text" id="nombre" name="nombre"><br>
 
@@ -64,7 +69,7 @@ function mostrarFormularioActualizacion(id) {
         <label for="telefono">Teléfono:</label>
         <input type="tel" id="telefono" name="telefono"><br>
 
-        <button type="submit">Actualizar</button>
+        <button id="update" type="submit">Actualizar</button>
     `;
 
     let divFormulario = document.getElementById('formulario');
@@ -72,8 +77,8 @@ function mostrarFormularioActualizacion(id) {
     fetch(`http://localhost:8000/api/usuarios/${id}`)
         .then(response => response.json())
         .then(data => {
-        formulario.querySelector('#nombre').setAttribute('value', data.nombre);
-        formulario.querySelector('#apellido_paterno').setAttribute('value', data.apellido_paterno);
+        formulario.querySelector('#nombre').setAttribute('value', plural(data.nombre));
+        formulario.querySelector('#apellido_paterno').setAttribute('value', plural(data.apellido_paterno));
         formulario.querySelector('#apellido_materno').setAttribute('value', data.apellido_materno);
         formulario.querySelector('#edad').setAttribute('value', data.edad);
         formulario.querySelector('#email').setAttribute('value', data.email);
@@ -133,3 +138,19 @@ let botonEliminarUsuario = document.getElementById('eliminar-usuario');
                 })
                 .catch(error => console.error(error));
 });
+
+function capitalizarPalabras(str) {
+    return str.toLowerCase().replace(/(?:^|\s)\S/g, function(a) {
+    return a.toUpperCase();
+    });
+}
+
+function plural(str) {
+    if (str.indexOf(' ') != -1) {
+        return (str.slice(0, str.indexOf(" ")) + capitalizarPalabras(str.slice(str.indexOf(' '))))
+    }
+
+    else {
+        return(str)
+    }
+}

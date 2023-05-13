@@ -1,4 +1,4 @@
-const filtroEdadBtn = document.getElementById('filtro-edad');3
+const filtroEdadBtn = document.getElementById('filtro-edad');
 const filtroApellidoBtn = document.getElementById('filtro-apellido');
 const usuariosLista = document.getElementById('usuarios-lista');
 const limpiarFiltrosBtn = document.getElementById('limpiar-filtros');
@@ -12,7 +12,7 @@ filtroEdadBtn.addEventListener('click', async () => {
                 // Actualizar el contenido del elemento <ul> con los resultados filtrados
         usuariosLista.innerHTML = '';
         data.forEach(usuario => {
-        usuariosLista.innerHTML += `<li><a href="http://localhost:8000/usuarios/${usuario.id}">${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} - ${usuario.edad}</a></li>`;
+        usuariosLista.innerHTML += `<li><a href="http://localhost:8000/usuarios/${usuario.id}">${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} / Edad: ${usuario.edad}</a></li>`;
         });
     } catch (error) {
         console.error(error);
@@ -28,7 +28,7 @@ filtroApellidoBtn.addEventListener('click', async () => {
                 // Actualizar el contenido del elemento <ul> con los resultados filtrados
         usuariosLista.innerHTML = '';
         data.forEach(usuario => {
-        usuariosLista.innerHTML += `<li><a href="http://localhost:8000/usuarios/${usuario.id}">${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} - ${usuario.edad}</a></li>`;
+        usuariosLista.innerHTML += `<li><a href="http://localhost:8000/usuarios/${usuario.id}">${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} / Edad: ${usuario.edad}</a></li>`;
         });
     } catch (error) {
         console.error(error);
@@ -36,6 +36,7 @@ filtroApellidoBtn.addEventListener('click', async () => {
 });
 
 limpiarFiltrosBtn.addEventListener('click', async () => {
+    
     try {
                 // Hacer la petición a la API sin parámetros
         const response = await fetch('http://localhost:8000/api/usuarios');
@@ -44,7 +45,7 @@ limpiarFiltrosBtn.addEventListener('click', async () => {
                 // Actualizar el contenido del elemento <ul> con todos los resultados
         usuariosLista.innerHTML = '';
         data.forEach(usuario => {
-        usuariosLista.innerHTML += `<li><a href="http://localhost:8000/usuarios/${usuario.id}">${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} - ${usuario.edad}</a></li>`;
+        usuariosLista.innerHTML += `<li><a href="http://localhost:8000/usuarios/${usuario.id}">${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} / Edad: ${usuario.edad}</a></li>`;
         });
     } catch (error) {
         console.error(error);
@@ -69,7 +70,7 @@ function capitalizarPalabras(str) {
         const li = document.createElement('li');
         const a = document.createElement("a");
         a.href = `http://localhost:8000/usuarios/${usuario.id}`;
-        a.appendChild(document.createTextNode(`${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} - ${usuario.edad}`));
+        a.appendChild(document.createTextNode(`${capitalizarPalabras(usuario.nombre)} ${usuario.apellido_paterno} / Edad: ${usuario.edad}`));
         li.appendChild(a);
         listaUsuarios.appendChild(li);
     });

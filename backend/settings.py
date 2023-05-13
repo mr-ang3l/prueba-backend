@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     "corsheaders",
 ]
 
-SECRET_KEY = config("SECRET_KEY")
+SECRET_KEY = "hola"
 
 DEBUG = False
 

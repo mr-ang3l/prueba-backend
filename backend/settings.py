@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Application definition
@@ -32,6 +32,12 @@ INSTALLED_APPS = [
     "interfaz",
     "corsheaders",
 ]
+
+SECRET_KEY = "development"
+
+DEBUG = True
+
+ALLOWED_HOSTS = ["localhost", ".vercel.app"]
 
 
 MIDDLEWARE = [

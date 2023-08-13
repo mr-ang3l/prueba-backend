@@ -17,9 +17,9 @@
 <body>
     <h1 id="main-title">Lista de <span>usuarios</span></h1>
     <div id="buttons">
-      <button id="filtro-edad" class="filtros green">Filtrar por edad 👶</button>
-      <button id="filtro-apellido" class="filtros green">Filtrar por apellido paterno 👨</button>
-      <button id="limpiar-filtros" class="filtros">Limpiar filtros 🧹</button>
+      <button id="filtro-edad" class="filtros green" onclick="document.getElementById('filtro-edad').classList.add('active')">Filtrar por edad 👶</button>
+      <button id="filtro-apellido" class="filtros green" onclick="document.getElementById('filtro-apellido').classList.add('active')">Filtrar por apellido paterno 👨</button>
+      <button id="limpiar-filtros" class="filtros" onclick="document.getElementById('filtro-edad').classList.remove('active'); document.getElementById('filtro-apellido').classList.remove('active'); ">Limpiar filtros 🧹</button>
     </div>
 
 
